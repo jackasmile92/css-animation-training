@@ -1,0 +1,71 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.txt{
+    color:white;
+    background-color: black;
+
+    font-size: 200px;
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: uppercase;
+
+/*preventing highlighting when select text*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.txt::before{
+    content: 'hey';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+}
+
+.neon-wrapper{
+    display: inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+}
+
+.gradient{
+    /* http://ourownthing.co.uk/gradpad.html# */
+    background:linear-gradient(89.156348024978deg, rgba(243, 72, 104,1) 20.130859375%,rgba(243, 72, 104,1) 41.04296875%,rgba(158, 0, 236,1) 76.66650390625%,rgba(158, 0, 236,1) 78.490234375%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+
+.dodge{
+    background: radial-gradient(circle, white, black 35%) center / 25% 25%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: color-dodge;
+    animation: dodge-area 3s linear infinite;
+}
+
+@keyframes dodge-area{
+    to{
+        transform: translate(50%, 50%);
+    }
+}
