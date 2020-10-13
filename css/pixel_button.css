@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.wrapper:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.button-content {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 2px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.buttons:hover{
+    background: #ec0b36 url('../src/img/pixel.png');
+    background-size: 180px;
+    transition-delay: 0.8s;
+    animation: animate 0.8s steps(8) forwards;
+}
+
+
+.buttons:nth-child(2):hover{
+    background: #730bec url('../src/img/pixel2.png');
+    background-size: 180px;
+    transition-delay: 0.8s;
+    animation: animate 0.8s steps(8) forwards;
+}
+
+@keyframes animate {
+    0%
+    {
+        background-position-y: 0;
+    }
+    100%
+    {
+        background-position-y: -480px;
+    }
+}
