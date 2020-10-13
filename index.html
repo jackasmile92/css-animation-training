@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/pixel_button.css">
     <link rel="stylesheet" href="./css/drop_shadow.css">
-
+   <link rel="stylesheet" href="./css/frosted.css">
+    
 </head>
 
 <body>
@@ -30,10 +31,33 @@
 
     <!-- https://www.youtube.com/watch?v=8r3_HLVaWwM -->
     <div class="wrapper">
-        <div class="box"><h2>Gradient</h2></div>
-        <div class="box"><h2>Box</h2></div>
-        <div class="box"><h2>Shadow</h2></div>
+        <div class="box">
+            <h2>Gradient</h2>
+        </div>
+        <div class="box">
+            <h2>Box</h2>
+        </div>
+        <div class="box">
+            <h2>Shadow</h2>
+        </div>
     </div>
+
+    <!-- https://www.youtube.com/watch?v=Zk_q0GqY3Fc -->
+    <div class="wrapper" id="scratch">
+        <h2>BOO</h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src='./js/wScratch.min.js'></script>
+
+    <script type="text/javascript">
+        $('#scratch').wScratchPad({
+            size: 55,          // The size of the brush/scratch.
+            bg: '#ec0b36',  // Background (image path or hex color).
+            fg: '#000'  // Foreground (image path or hex color).
+        });
+    </script>
 </body>
 
 </html>
