@@ -40,6 +40,7 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     mix-blend-mode: difference;
+    z-index: 100;
 }
 
 .menu_cursor ul li:hover~.cursor {
