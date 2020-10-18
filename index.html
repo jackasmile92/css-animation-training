@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="./css/menu_cursor.css"> -->
     <link rel="stylesheet" href="./css/focus.css">
     <link rel="stylesheet" href="./css/parallax.css">
-
+    <link rel="stylesheet" href="./css/coolhover.css">
 </head>
 
 <body>
@@ -122,20 +122,28 @@
     <script type="text/javascript">
         document.addEventListener("mousemove", parallax);
 
-        function parallax(e){
+        function parallax(e) {
             this.querySelectorAll('.parallax-element').forEach(
-            layer => {
-                const speed = layer.getAttribute('data-speed');
+                layer => {
+                    const speed = layer.getAttribute('data-speed');
 
-                const x = (window.innerWidth - e.clientX * speed)/100;
-                const y = (window.innerHeight - e.clientY * speed)/100;
+                    const x = (window.innerWidth - e.clientX * speed) / 100;
+                    const y = (window.innerHeight - e.clientY * speed) / 100;
 
-                layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-            })
+                    layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+                })
         }
     </script>
-
-
+    <!-- https://www.youtube.com/watch?v=ANLgG1RtFVM -->
+    <section class="coolhover">
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Button
+        </a>
+    </section>
 </body>
 
 </html>
