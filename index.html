@@ -15,9 +15,17 @@
     <link rel="stylesheet" href="./css/parallax.css">
     <link rel="stylesheet" href="./css/coolhover.css">
     <link rel="stylesheet" href="./css/iphone.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
 </head>
 
 <body>
+    <!-- https://www.youtube.com/watch?v=cL_dytFgasA -->
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <div id="percent">Page Scrolled 0 %</div>
+
+
+
     <!-- https://www.youtube.com/watch?v=YiSzx0Cb8_8&feature=youtu.be -->
     <div class="wrapper">
         <div class="neon-wrapper">
@@ -150,6 +158,22 @@
     <div class="wrapper wrapper__phone">
         <div class="iPhone"></div>
     </div>
+
+
+
+<!-- don't touch scrollbar!-->
+    <script type="text/javascript">
+        var progressbar = document.getElementById("progressbar");
+        var percent = document.getElementById("percent");
+
+        var totalHeight = document.body.offsetHeight - window.innerHeight;
+        window.onscroll = function () {
+            var progress = (window.pageYOffset / totalHeight) * 100;
+            progressbar.style.height = progress + "%";
+            percent.innerHTML = "Page Scrolled " + Math.round(progress) + " %";
+        }
+
+    </script>
 </body>
 
 </html>
