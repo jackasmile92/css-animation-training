@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/clippath.css">
+</head>
+
+<body>
+    <section class="banner">
+        <img src="./src/img/7be815d5-6674-4aa5-818a-0a485f39ed85.jpg" >
+    </section>
+    <div class="container">
+        <h2>Scroll To See Magic Again</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi iusto voluptatem ipsum deleniti error reprehenderit quae perferendis tempore repellat, expedita corrupti eaque facilis dolorum repudiandae voluptatibus nulla odio! Consequatur!
+        Asperiores voluptatum iste quod tempore dolorum non, soluta quam ullam amet magnam accusantium! Enim expedita pariatur, magni laudantium nostrum recusandae ullam excepturi natus id nobis mollitia quaerat. Commodi, quisquam unde.
+        Asperiores iste neque eos porro? Autem modi cupiditate explicabo, adipisci corporis fugiat ullam veniam in repellat. Eveniet quod adipisci ut suscipit eos. Laborum libero cumque facere qui tempora velit sint?
+        Obcaecati deserunt non commodi perferendis quia recusandae facere quam vitae architecto atque, numquam harum necessitatibus distinctio, sunt, iste praesentium sequi. Impedit, sed! Sit natus nostrum rem aut nam possimus dignissimos.
+        Sed quo eaque sapiente. Tenetur, in atque. Dolorum recusandae, ab odit ea sint voluptas esse soluta ratione sed delectus beatae vero magnam neque error aliquid. Voluptatem facilis consequuntur in reiciendis.
+        Quisquam illum vitae optio quos nihil, repellendus ex tempore tempora nesciunt hic magnam dolores rem adipisci pariatur, voluptatum dignissimos eos repudiandae. Non ipsum ea nulla suscipit possimus nam quasi deserunt!
+        Amet, optio saepe! Repudiandae delectus atque ut obcaecati nulla illum exercitationem quis fuga assumenda beatae, aspernatur corrupti? Quae corrupti nemo sed culpa, molestiae est ea facilis eligendi. Neque, ipsa optio.</p>
+    </div>
+    <script type="text/javascript">
+        const banner = document.querySelector('.banner');
+        window.addEventListener('scroll', function(){
+            const value = 800 - window.scrollY;
+            banner.style.clipPath = "circle(" + value + "px at center center)";
+        })
+    </script>
+
+</body>
+
+</html>
