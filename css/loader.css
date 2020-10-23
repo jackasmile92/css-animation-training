@@ -27,10 +27,10 @@
     background: #8dff08;
     box-shadow: 60px 55px 0 #ffeb3b;
     border-radius: 50%;
-    animation: animate 5s linear infinite;
+    animation: animate1 5s linear infinite;
 }
 
-@keyframes animate{
+@keyframes animate1{
     0%{
         filter: blur(50px) hue-rotate(0deg);
     }
