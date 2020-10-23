@@ -1,9 +1,10 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background: black;
 }
-.wrapper{
+
+.wrapper {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -11,8 +12,8 @@ body{
     background: black;
 }
 
-.txt{
-    color:white;
+.txt {
+    color: white;
     background-color: black;
 
     font-size: 200px;
@@ -20,32 +21,38 @@ body{
     font-family: Arial;
     text-transform: uppercase;
 
-/*preventing highlighting when select text*/
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+    /*preventing highlighting when select text*/
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-.txt::before{
+.txt::before {
     content: 'hey';
     position: absolute;
     mix-blend-mode: difference;
     filter: blur(3px);
 }
 
-.neon-wrapper{
+.neon-wrapper {
     display: inline-flex;
     filter: brightness(200%);
     overflow: hidden;
 }
 
-.gradient{
+.gradient {
     /* http://ourownthing.co.uk/gradpad.html# */
-    background:linear-gradient(89.156348024978deg, rgba(243, 72, 104,1) 20.130859375%,rgba(243, 72, 104,1) 41.04296875%,rgba(158, 0, 236,1) 76.66650390625%,rgba(158, 0, 236,1) 78.490234375%);
+    background: linear-gradient(89.156348024978deg, rgba(243, 72, 104, 1) 20.130859375%, rgba(243, 72, 104, 1) 41.04296875%, rgba(158, 0, 236, 1) 76.66650390625%, rgba(158, 0, 236, 1) 78.490234375%);
     position: absolute;
     top: 0;
     left: 0;
@@ -54,7 +61,7 @@ body{
     mix-blend-mode: multiply;
 }
 
-.dodge{
+.dodge {
     background: radial-gradient(circle, white, black 35%) center / 25% 25%;
     position: absolute;
     top: -100%;
@@ -65,8 +72,40 @@ body{
     animation: dodge-area 3s linear infinite;
 }
 
-@keyframes dodge-area{
-    to{
+@keyframes dodge-area {
+    to {
         transform: translate(50%, 50%);
     }
+}
+
+
+.tubelight h2 {
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 15px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: .70em;
+    outline: none;
+    animation: tubelight 5s linear infinite;
+}
+
+@keyframes tubelight {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color:#fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+
 }
