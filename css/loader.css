@@ -14,7 +14,7 @@
     background: #ff3b8d;
     box-shadow: -60px -55px 0 #07b2ff;
     border-radius: 50%;
-    animation: animate 5s linear infinite;
+    animation: animate1 5s linear infinite;
 }
 
 .loader::after{

@@ -20,6 +20,19 @@
 </head>
 
 <body>
+    <!-- https://www.youtube.com/watch?v=6HFpw5fcaD8&list=PL2zIZ59qGJBA47RiWAWFTN4nLfWRKuTDu&index=23&ab_channel=OnlineTutorials -->
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
     <!-- https://www.youtube.com/watch?v=cL_dytFgasA -->
     <div id="progressbar"></div>
     <div id="scrollpath"></div>
@@ -28,7 +41,7 @@
 
     <!-- https://www.youtube.com/watch?v=_13a3r6MYeM&ab_channel=OnlineTutorials -->
     <div class="wrapper tubelight">
-        <h2 contenteditable="true" >Text</h2>
+        <h2 contenteditable="true">Text</h2>
     </div>
 
     <!-- https://www.youtube.com/watch?v=QJfD-q8IoIU -->
@@ -171,7 +184,13 @@
         <div class="iPhone"></div>
     </div>
 
-
+    <!-- header navbar -->
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
 
     <!-- don't touch scrollbar!-->
     <script type="text/javascript">
