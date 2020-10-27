@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/fullpagemenu.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!-- https://www.youtube.com/watch?v=DKkdxIEvu2U&list=PL5e68lK9hEzd-5X8ISTULXu4CBmdZfCIg&ab_channel=OnlineTutorials -->
+    <div class="toggle"><a href="#"><i class="fa fa-bars"></i></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript"> 
+    $(document).ready(
+        function(){
+            $('.toggle a').click(function(){
+                $('.menu').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
