@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
     padding: 0;
     margin: 0;
@@ -94,18 +96,36 @@ body {
 }
 
 @keyframes tubelight {
-    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
         color: #0e3742;
         text-shadow: none;
     }
 
-    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
-        color:#fff;
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
         text-shadow: 0 0 10px #03bcf4,
-        0 0 20px #03bcf4,
-        0 0 40px #03bcf4,
-        0 0 80px #03bcf4,
-        0 0 160px #03bcf4;
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
     }
 
 }
@@ -123,13 +143,13 @@ header {
     z-index: 100000;
 }
 
-header.sticky{
+header.sticky {
     padding: 5px 100px;
     background: #fff;
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.555);
 }
 
-header .logo{
+header .logo {
     position: relative;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
@@ -141,12 +161,12 @@ header .logo{
     transition: .6s;
 }
 
-header ul{
+header ul {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 header ul li {
@@ -154,7 +174,7 @@ header ul li {
     list-style: none;
 }
 
-header ul li a{
+header ul li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -164,7 +184,54 @@ header ul li a{
     font-weight: 500;
     transition: .6s;
 }
+
 header.sticky .logo,
-header.sticky ul li a{
+header.sticky ul li a {
     color: #000;
+}
+
+.coolButtons {
+    flex-direction: column;
+}
+
+.coolButtons a {
+overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 10px 0;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+.coolButtons a:nth-child(2) {
+    background: linear-gradient(90deg, #755bea, #ff72c0);
+}
+
+.coolButtons span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animatebuttons 1s linear infinite;
+}
+
+@keyframes animatebuttons {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: .5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }

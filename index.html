@@ -38,6 +38,12 @@
     <div id="scrollpath"></div>
     <div id="percent">Page Scrolled 0 %</div>
 
+    <!-- https://www.youtube.com/watch?v=ueyRcYEmsrI&ab_channel=OnlineTutorials -->
+    <div class="wrapper coolButtons">
+        <a href="#" class="coolB">Button</a>
+        <a href="#" class="coolB">Button</a>
+    </div>
+
 
     <!-- https://www.youtube.com/watch?v=_13a3r6MYeM&ab_channel=OnlineTutorials -->
     <div class="wrapper tubelight">
@@ -190,6 +196,28 @@
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
+    </script>
+
+    <!-- coolB js-->
+    <script type="text/javascript">
+        const buttons =document.querySelectorAll('.coolB');
+        buttons.forEach(btn =>{
+            btn.addEventListener('click', function(e){
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+
+                setTimeout(()=>{
+                    ripples.remove()
+                }, 1000);
+            })
+        })    
+
+
     </script>
 
     <!-- don't touch scrollbar!-->
