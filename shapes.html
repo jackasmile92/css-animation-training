@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: 'Borderlands';
+            src: url('./src/fonts/6454.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .borderlands-button {
+            width: 187px;
+            height: 50px;
+            transform: skew(-21deg);
+            background: #ffea02;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .borderlands-button:before {
+            content: "";
+            position: absolute;
+            background: #ffea02;
+            width: 20px;
+            height: 30px;
+            top: 9.9px;
+            left: -9.8px;
+            transform: skewX(21deg) skewY(-46deg);
+        }
+
+        .borderlands-button:after {
+            content: "";
+            position: absolute;
+            background: #ffea02;
+            width: 20px;
+            height: 30px;
+            top: 9.9px;
+            right: -10px;
+            transform: skewX(21deg) skewY(-46deg);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .borderlands-button-text {
+
+            transform: skew(21deg);
+
+            font-family: Borderlands, sans-serif;
+            font-style: italic;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            font-size: 18px;
+        }
+
+
+        .borderlands-button--blue,
+        .borderlands-button--blue:before,
+        .borderlands-button--blue:after {
+            background: #0090ff;
+        }
+
+        .borderlands-button--blue .borderlands-button-text {
+            z-index: 11;
+            color: white;
+        }
+
+        .button_back_wrapper {
+            position: absolute;
+            z-index: 10;
+            transform: skewX(21deg) scaleY(.85) scaleX(.92);
+        }
+
+        .borderlands-button--gray,
+        .borderlands-button--gray:before,
+        .borderlands-button--gray:after {
+
+            background: #39393a;
+        }
+
+        .borderlands-button--gray {
+            transform: skew(-30deg);
+        }
+
+
+        .borderlands-button--gray:before,
+        .borderlands-button--gray:after {
+            width: 30px;
+            height: 19px;
+            top: 15.1px;
+            transform: skewX(30deg) skewY(-46deg);
+        }
+
+        .borderlands-button--gray:before {
+            left: -15px;
+        }
+
+        .borderlands-button--gray:after {
+            right: -15px;
+        }
+
+        .button__wrapper {
+            margin: 15px;
+        }
+
+        .button__content:hover {
+            transform: translateY(-20px);
+            transition: 0.5s;
+        }
+
+        .borderlands-button--black,
+        .borderlands-button--black:before,
+        .borderlands-button--black:after {
+            background: black;
+        }
+
+        .borderlands-button--black {
+            border-top: white 5px solid;
+            border-bottom: white 5px solid;
+            height: 52px;
+            width: 150px;
+        }
+
+        .borderlands-button--black .borderlands-button-text {
+            color: white;
+        }
+
+        .borderlands-button--black:before {
+            border-top: white 7px solid;
+            border-left: white 5px solid;
+            top: 7px;
+            left: -12px;
+        }
+
+        .borderlands-button--black:after {
+            border-bottom: white 7px solid;
+            border-right: white 5px solid;
+            top: 7.5px;
+            right: -11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="button__wrapper">
+            <div class="button__content">
+                <a href="#">
+                    <div class="borderlands-button">
+                        <div class="borderlands-button-text"> Buy now</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="button__wrapper">
+            <div class="button__content">
+                <a href="#">
+                    <div class="borderlands-button borderlands-button--black">
+                        <div class="borderlands-button-text"> Buy now</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="button__wrapper">
+            <div class="button__content">
+                <a href="#">
+                    <div class="borderlands-button borderlands-button--blue">
+
+                        <div class="button_back_wrapper">
+                            <div class="borderlands-button borderlands-button--gray"></div>
+                        </div>
+                        <div class="borderlands-button-text"> Buy now</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
