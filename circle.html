@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        section div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0e233e;
+        }
+
+        section div:nth-child(2) {
+            background: #e91e63;
+            clip-path: circle(200px at center);
+        }
+
+        h2 {
+            position: absolute;
+            left: 0;
+            font-size: 10em;
+            color: #fff;
+            white-space: nowrap;
+            line-height: 100vh;
+            cursor: default;
+            animation: animate 180s linear infinite;
+        }
+
+        section div:nth-child(2) h2 {
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: #fff;
+            color: transparent;
+        }
+
+        @keyframes animate {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+       https://www.youtube.com/watch?v=WqZZppQd87M&ab_channel=OnlineTutorials 
+    -->
+    <section>
+        <div>
+            <h2>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex at, cumque ad voluptatem laboriosam nulla
+                iusto magni facilis ea numquam quaerat perspiciatis est unde natus voluptas officia aliquid rem.
+                Nemo.Exercitationem impedit cumque nesciunt accusantium ex, non et ad illum deserunt, dicta earum saepe
+                laudantium corporis voluptas ea facilis aperiam expedita repudiandae praesentium. Sequi aperiam nostrum
+                natus eveniet corrupti soluta?
+            </h2>
+        </div>
+        <div>
+            <h2>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex at, cumque ad voluptatem laboriosam nulla
+                iusto magni facilis ea numquam quaerat perspiciatis est unde natus voluptas officia aliquid rem.
+                Nemo.Exercitationem impedit cumque nesciunt accusantium ex, non et ad illum deserunt, dicta earum saepe
+                laudantium corporis voluptas ea facilis aperiam expedita repudiandae praesentium. Sequi aperiam nostrum
+                natus eveniet corrupti soluta?
+            </h2>
+        </div>
+    </section>
+</body>
+
+</html>
