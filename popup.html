@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff173;
+            transition: .5s;
+            padding: 20px;
+
+        }
+
+        .container.active {
+            filter: blur(20px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+        }
+
+        a {
+            position: relative;
+            padding: 5px 20px;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background: #111;
+        }
+
+        #popup {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            padding: 50px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+            background: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        #popup.active{
+            top: 50%;
+            visibility: visible;
+            opacity: 1;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        https://www.youtube.com/watch?v=snhpoxtLugU&ab_channel=OnlineTutorials
+    -->
+    <div class="container" id="blur">
+        <div class="content">
+            <h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, distinctio, incidunt non quos,
+                adipisci at assumenda vel quo eaque nostrum quisquam pariatur laborum inventore. Ea aliquid ullam
+                officia? Cupiditate, est!
+            </h2>
+            <a href="#" onclick="toggle()">Read More</a>
+        </div>
+    </div>
+    <div id="popup">
+        <h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+        </h2>
+        <p>
+            Consequuntur quis unde iste voluptas deleniti sed, nulla enim asperiores impedit vitae nesciunt iusto.
+            Numquam modi sint nemo asperiores praesentium perferendis. Consequatur.
+            Aut eaque assumenda laborum labore eos sequi iste, sunt voluptatum voluptates debitis repellendus neque quos
+            nemo cupiditate eum hic perferendis culpa. Nostrum, cum veritatis ad provident quas aliquam nam tenetur?
+            Ipsa nam, omnis maiores esse magnam soluta nisi deserunt optio pariatur commodi rerum voluptates ratione
+            saepe fugit, aliquam aliquid? Consequuntur ea corrupti voluptates aliquid blanditiis autem fugit, aut
+            itaque? Aut?
+        </p>
+        <a href="#" onclick="toggle()">Close</a>
+    </div>
+
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
