@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    https://www.youtube.com/watch?v=VKcbZGW1woc&ab_channel=OnlineTutorials
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            position: relative;
+            width: 600px;
+            height: 350px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            transition: .5s;
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #d83133;
+            clip-path: circle(120px at center);
+            transition: .5s;
+        }
+
+        .card:hover .circle::before {
+            border-radius: 20px;
+            background: #0065c3;
+            clip-path: circle(400px at center);
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 300px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .card:hover img {
+            left: 72%;
+            height: 500px;
+        }
+
+        .content {
+            position: relative;
+            width: 50%;
+            left: 20%;
+            padding: 20px 20px 20px 40px;
+            transition: .5s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .card:hover .content {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2em;
+            line-height: 1em;
+        }
+
+        p {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        a {
+            position: relative;
+            color: #111;
+            padding: 10px 20px;
+            background: #fff;
+           
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        @media (max-width: 991px) {
+            .card{
+                width:auto;
+                max-width: 350px;
+                align-items: flex-start;
+                margin: 10px;
+            }
+
+            .card:hover{
+                height:700px;
+            }
+
+            .content{
+                width: 100%;
+                left: 0;
+                padding: 40px;
+            }
+
+            .card:hover img{
+                top: 70%;
+                left: 50%;
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .content{
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="circle"></div>
+        <div class="content">
+            <h2>Bepis</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est harum ipsum eligendi inventore
+                hic, itaque recusandae sint ipsam ea atque? </p>
+            <a href="#">Buy now</a>
+        </div>
+        <img src="./src/img/bepis.png" alt="">
+
+    </div>
+</body>
+
+</html>
