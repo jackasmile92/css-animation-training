@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+    https://www.youtube.com/watch?v=Y3ggz_fS3eM&ab_channel=OnlineTutorials
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        ul {
+            position: relative;
+            display: flex
+        }
+
+        li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            font-size: 3em;
+            color: #fff;
+            transition: .3s;
+        }
+
+        li:hover a {
+            color: #2196f3;
+        }
+
+        .cursor {
+            position: fixed;
+            width: 0;
+            height: 0;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            transition: width .2s, height .2s;            
+        }
+
+        li:hover~.cursor {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #2196f3;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#"><i class="fa fa-bath" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-bicycle" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-sign-language" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-subway" aria-hidden="true"></i></a></li>
+        <div class="cursor"></div>
+    </ul>
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        })
+    </script>
+</body>
+
+</html>
